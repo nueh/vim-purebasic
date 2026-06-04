@@ -43,19 +43,19 @@ Then rebuild the help tags:
 ### vim-plug
 
 ```vim
-Plug 'DNSGeek/vim-purebasic'
+Plug 'nueh/vim-purebasic'
 ```
 
 ### lazy.nvim
 
 ```lua
-{ 'DNSGeek/vim-purebasic' }
+{ 'nueh/vim-purebasic' }
 ```
 
 ### Packer
 
 ```lua
-use 'DNSGeek/vim-purebasic'
+use 'nueh/vim-purebasic'
 ```
 
 ---
@@ -75,8 +75,8 @@ Set the compiler location via environment variable before starting Vim:
 
 ```sh
 # PureBasic
-export PUREBASIC_HOME=/Applications/PureBasic      # macOS
-export PUREBASIC_HOME=/usr/local/purebasic          # Linux
+export PUREBASIC_HOME=/Applications/PureBasic/Contents/Resources      # macOS
+export PUREBASIC_HOME=/usr/local/purebasic                            # Linux
 # Windows: set PUREBASIC_HOME=C:\Program Files\PureBasic
 
 # SpiderBasic
