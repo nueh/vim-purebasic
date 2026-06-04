@@ -53,7 +53,7 @@ endif
 " Set makeprg to the PureBasic compiler if configured
 if !empty($PUREBASIC_HOME)
   if has('win32') || has('win64')
-    setlocal makeprg=$PUREBASIC_HOME/Compilers/pbcompiler\ \"%\"
+    setlocal makeprg=$PUREBASIC_HOME/compilers/pbcompiler\ \"%\"
   else
     setlocal makeprg=$PUREBASIC_HOME/pbcompiler\ \"%\"
   endif
