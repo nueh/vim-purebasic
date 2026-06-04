@@ -53,12 +53,14 @@ endif
 " Set makeprg to the PureBasic compiler if configured
 if !empty($PUREBASIC_HOME)
   if has('win32') || has('win64')
-    setlocal makeprg=$PUREBASIC_HOME/compilers/pbcompiler\ \"%\"
+    " This is untested and probably needs '/QUIET'
+    setlocal makeprg=$PUREBASIC_HOME/Compilers/pbcompiler\ \"%\"
   else
-    setlocal makeprg=$PUREBASIC_HOME/pbcompiler\ \"%\"
+    setlocal makeprg=$PUREBASIC_HOME/compilers/pbcompiler\ -q\ \"%\"
   endif
-  " Error format: Error: <file> Line <n> - <message>
-  setlocal errorformat=Error:\ %f\ Line\ %l\ -\ %m,Line\ %l\ -\ %m
+  setlocal errorformat=Error:\ Line\ %l\ -\ %m
+  setlocal errorformat+=%EError:\ in\ included\ file\ '%f',%ZLine\ %l\ -\ %m
+  "setlocal errorformat=Error:\ %f\ Line\ %l\ -\ %m,Line\ %l\ -\ %m
 endif
 
 " ── Restore ───────────────────────────────────────────────────────────────────
